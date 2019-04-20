@@ -3,4 +3,4 @@ script:
 
 language: sass
 before_install:
-- gem install sass
+- gem install sass --no-ri --no-rdoc
