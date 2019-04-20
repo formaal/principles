@@ -5,8 +5,8 @@
 ### For development
 
 ```sh
-	$ yarn
-	$ yarn run start
+$ yarn
+$ yarn run start
 ```
 
 ---
@@ -14,13 +14,13 @@
 ### For use (yarn)
 
 ```sh
-	$ yarn add principles
+$ yarn add principles
 ```
 
 ### For use (NPM)
 
 ```sh
-	$ npm install principles
+$ npm install principles
 ```
 
 ---
