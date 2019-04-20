@@ -1,18 +1,23 @@
 {
   "name": "principles",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A Framework by Formål",
   "main": "principles.min.css",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "release:test": "rm CHANGELOG.md && changelog -p",
+    "release:major": "rm CHANGELOG.md && changelog -M && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "rm CHANGELOG.md && changelog -m && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "rm CHANGELOG.md && changelog -p && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
+    "changelog": "node generate-changelog.js",
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm run changelog",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/principles.css css/principles.css",
     "build-cleancss": "cleancss -o css/principles.min.css css/principles.css",
-    "build-clean": "rimraf css",
+    "build-clean": "rimraf css && rm CHANGELOG.md",
     "build-sass": "node-sass --output-style expanded --source-map true src/principles.scss css/principles.css",
-    "start": "npm run build-sass -- --watch"
+    "dev": "npm run build-sass -- --watch"
   },
   "repository": {
     "type": "git",
@@ -36,6 +41,7 @@
     "autoprefixer": "^9.5.1",
     "clean-css": "^4.2.1",
     "clean-css-cli": "^4.3.0",
+    "generate-changelog": "^1.7.1",
     "node-sass": "^4.11.0",
     "postcss-cli": "^6.1.2",
     "rimraf": "^2.6.3"
