@@ -8,9 +8,9 @@
   },
   "scripts": {
     "release:test": "rm CHANGELOG.md && changelog -p",
-    "release:major": "rm CHANGELOG.md && changelog -M && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
-    "release:minor": "rm CHANGELOG.md && changelog -m && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
-    "release:patch": "rm CHANGELOG.md && changelog -p && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
+    "release:major": "git stash && git checkout -b master && rm CHANGELOG.md && changelog -M && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "git stash && git checkout -b master && rm CHANGELOG.md && changelog -m && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "git stash && git checkout -b master && rm CHANGELOG.md && changelog -p && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
     "changelog": "node generate-changelog.js",
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm run changelog",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/principles.css css/principles.css",
