@@ -1,13 +1,13 @@
 {
   "name": "principles",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Framework by Formål",
   "main": "principles.min.css",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-		"release:test": "rm CHANGELOG.md && changelog -p",
+    "release:test": "rm CHANGELOG.md && changelog -p",
     "release:major": "rm CHANGELOG.md && changelog -M && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
     "release:minor": "rm CHANGELOG.md && changelog -m && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
     "release:patch": "rm CHANGELOG.md && changelog -p && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
