@@ -9,7 +9,7 @@
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/principles.css css/principles.css",
-    "build-cleancss": "cleancss -o css/princuples.min.css css/principles.css",
+    "build-cleancss": "cleancss -o css/principles.min.css css/principles.css",
     "build-clean": "rimraf css",
     "build-sass": "node-sass --output-style expanded --source-map true src/principles.scss css/principles.css",
     "start": "npm run build-sass -- --watch"
