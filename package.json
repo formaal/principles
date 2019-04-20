@@ -1,0 +1,43 @@
+{
+  "name": "principles",
+  "version": "0.0.1",
+  "description": "A Framework by Formål",
+  "main": "principles.min.css",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/principles.css css/principles.css",
+    "build-cleancss": "cleancss -o css/princuples.min.css css/principles.css",
+    "build-clean": "rimraf css",
+    "build-sass": "node-sass --output-style expanded --source-map true src/principles.scss css/principles.css",
+    "start": "npm run build-sass -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formaal/principles.git"
+  },
+  "keywords": [
+    "SASS",
+    "CSS",
+    "Framework",
+    "Design",
+    "System",
+    "Principles"
+  ],
+  "author": "Formål",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/formaal/principles/issues"
+  },
+  "homepage": "https://github.com/formaal/principles#readme",
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "clean-css": "^4.2.1",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.2",
+    "rimraf": "^2.6.3"
+  }
+}
