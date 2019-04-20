@@ -1,15 +1,16 @@
 {
   "name": "principles",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A Framework by Formål",
   "main": "principles.min.css",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "release:major": "changelog -M && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
-    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
-    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
+		"release:test": "rm CHANGELOG.md && changelog -p",
+    "release:major": "rm CHANGELOG.md && changelog -M && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "rm CHANGELOG.md && changelog -m && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "rm CHANGELOG.md && changelog -p && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
     "changelog": "node generate-changelog.js",
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm run changelog",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/principles.css css/principles.css",
