@@ -7,6 +7,9 @@
     "test": "tests"
   },
   "scripts": {
+		"release:major": "changelog -M && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version major && git push origin",
+		"release:minor": "changelog -m && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version minor && git push origin",
+		"release:patch": "changelog -p && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version patch && git push origin",
 		"changelog": "node generate-changelog.js",
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm run changelog",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/principles.css css/principles.css",
