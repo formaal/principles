@@ -12,10 +12,10 @@
     "release:minor": "git stash && git checkout master && rm CHANGELOG.md && changelog -m && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
     "release:patch": "git stash && git checkout master && rm CHANGELOG.md && changelog -p && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
     "changelog": "node generate-changelog.js",
-    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm run changelog",
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/principles.css css/principles.css",
     "build-cleancss": "cleancss -o css/principles.min.css css/principles.css",
-    "build-clean": "rimraf css && rm CHANGELOG.md",
+    "build-clean": "rimraf css",
     "build-sass": "node-sass --output-style expanded --source-map true src/principles.scss css/principles.css",
     "dev": "npm run build-sass -- --watch"
   },
