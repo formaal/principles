@@ -4,3 +4,6 @@ script:
 language: sass
 before_install:
 - gem install sass --no-document
+
+notifications:
+  slack: formaal:k4ufjIL41cIMxuqqDhJ3wzyp
