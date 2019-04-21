@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.0.11](https://github.com/formaal/principles/tree/v0.0.11) (2019-04-21)
+[Full Changelog](https://github.com/formaal/principles/compare/v0.0.10...v0.0.11)
+
+**Implemented enhancements:**
+
+- Initial font work. [\#8](https://github.com/formaal/principles/pull/8) ([Aberen](https://github.com/Aberen))
+
 ## [v0.0.10](https://github.com/formaal/principles/tree/v0.0.10) (2019-04-21)
 [Full Changelog](https://github.com/formaal/principles/compare/v0.0.9...v0.0.10)
 
