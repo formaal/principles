@@ -1,3 +1,20 @@
+#### 0.0.7 (2019-04-21)
+
+##### Build System / Dependencies
+
+* **Compiled SASS:**  Compiled Sass ([fc23f79b](https://github.com/formaal/principles/commit/fc23f79bea2451cb092aeb9aa704611e185f0197))
+
+##### New Features
+
+* **Grid:**  Added initial grid based on ethane ([72aabe12](https://github.com/formaal/principles/commit/72aabe12e10c7530f463a7ac66b1c8ee0efcb047))
+* **Global variables:**  Added initial breakpoint and color variable files ([f23b1bef](https://github.com/formaal/principles/commit/f23b1beffdfdb23be42ea4ba9909fb20e2f19717))
+
+##### Bug Fixes
+
+* **changelog:**
+  *  Fixed package.json so it doesn't delete changelog on generation ([7ee1b49b](https://github.com/formaal/principles/commit/7ee1b49b77cd8e963cae286340d382c026e215eb))
+  *  Fixed minor issue in package file that ruined changelog ([f2300a0e](https://github.com/formaal/principles/commit/f2300a0e5b5dba0e324ca6e108b2258dbbb1e625))
+
 #### 0.0.6 (2019-04-21)
 
 ##### Build System / Dependencies
