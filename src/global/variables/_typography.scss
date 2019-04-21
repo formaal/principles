@@ -1,0 +1,7 @@
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+$base-font-family-monospace: monospace !default;
+$render-mode: optimizeLegibility !default;
+
+html {
+	font-family: $base-font-family;
+}
