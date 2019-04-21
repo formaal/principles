@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.0.10](https://github.com/formaal/principles/tree/v0.0.10) (2019-04-21)
+[Full Changelog](https://github.com/formaal/principles/compare/v0.0.9...v0.0.10)
+
+**Fixed bugs:**
+
+- Fixed small issue in package file [\#7](https://github.com/formaal/principles/pull/7) ([Aberen](https://github.com/Aberen))
+
 ## [v0.0.9](https://github.com/formaal/principles/tree/v0.0.9) (2019-04-21)
 [Full Changelog](https://github.com/formaal/principles/compare/v0.0.7...v0.0.9)
 
