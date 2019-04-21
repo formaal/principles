@@ -1,0 +1,24 @@
+// Colors
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #808080;
+
+$color-blue: #2185d0;
+$color-red: #db2828;
+$color-purple: #a333c8;
+$color-pink: #e03997;
+$color-green: #21ba45;
+$color-teal: #00b5ad;
+$color-violet: #6435c9;
+$color-yellow: #fbbd08;
+$color-orange: #f2711c;
+
+// Primary & Secondary definitions
+$color-primary: $color-blue;
+$color-secondary: $color-grey;
+
+// Typography colors
+$color-text: lighten($color-black, 15%);
+
+// Element colors
+$link-color: $color-primary;
