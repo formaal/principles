@@ -1,16 +1,16 @@
 {
   "name": "principles",
-  "version": "0.0.8",
+  "version": "0.0.7",
   "description": "A Framework by Formål",
   "main": "principles.min.css",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "release:test": "changelog -p",
-    "release:major": "git stash && git checkout master && changelog -M && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
-    "release:minor": "git stash && git checkout master && changelog -m && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
-    "release:patch": "git stash && git checkout master && changelog -p && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
+    "release:create-changelog": "github_changelog_generator",
+    "release:major": "git stash && git checkout master && npm version major && git push origin && git push origin --tags && npm run release:create-changelog && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md'",
+    "release:minor": "git stash && git checkout master && npm version minor && git push origin && git push origin --tags && npm run release:create-changelog && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md'",
+    "release:patch": "git stash && git checkout master && npm version patch && git push origin && git push origin --tags && npm run release:create-changelog && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md'",
     "changelog": "node generate-changelog.js",
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/principles.css css/principles.css",
