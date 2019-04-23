@@ -8,9 +8,9 @@
   },
   "scripts": {
     "release:create-changelog": "github_changelog_generator",
-    "release:major": "git stash && git checkout master && npm version major && git push origin && git push origin --tags && npm run release:create-changelog && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && git push origin master",
-    "release:minor": "git stash && git checkout master && npm version minor && git push origin && git push origin --tags && npm run release:create-changelog && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && git push origin master",
-    "release:patch": "git stash && git checkout master && npm version patch && git push origin && git push origin --tags && npm run release:create-changelog && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && git push origin master",
+    "release:major": "git stash && git checkout master && git stash && git pull && npm version major && git push origin && git push origin --tags && npm run release:create-changelog && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && git push origin master && git stash pop",
+    "release:minor": "git stash && git checkout master && git stash && git pull && npm version minor && git push origin && git push origin --tags && npm run release:create-changelog && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && git push origin master && git stash pop",
+    "release:patch": "git stash && git checkout master && git stash && git pull && npm version patch && git push origin && git push origin --tags && npm run release:create-changelog && git add CHANGELOG.md && git commit -am 'updated CHANGELOG.md' && git push origin master && git stash pop",
     "changelog": "node generate-changelog.js",
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/principles.css css/principles.css",
