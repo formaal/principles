@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.0.14](https://github.com/formaal/principles/tree/v0.0.14) (2019-04-23)
+[Full Changelog](https://github.com/formaal/principles/compare/v0.0.13...v0.0.14)
+
+**Merged pull requests:**
+
+- Fixed small thing in release script. [\#10](https://github.com/formaal/principles/pull/10) ([Aberen](https://github.com/Aberen))
+
 ## [v0.0.13](https://github.com/formaal/principles/tree/v0.0.13) (2019-04-23)
 [Full Changelog](https://github.com/formaal/principles/compare/v0.0.12...v0.0.13)
 
